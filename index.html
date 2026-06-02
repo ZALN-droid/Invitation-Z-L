@@ -38,25 +38,28 @@ body {
 /* ===== ENVELOPE HALVES ===== */
 
 .panel {
-    position: absolute;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 5;
-    transition: transform 1.2s ease;
+    position:absolute;
+    top:0;
+    width:50vw;
+    height:100vh;
+    background:#91AC97;
+    border:3px solid #C4AE40;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    transition:transform 1.4s ease-in-out;
 }
 
-.left {
-    left: 0;
-    background-image: url("left.png");
+.left{
+    left:0;
+    transform-origin:left center;
+    border-right:none;
+    z-index:1;
 }
 
-.right {
-    right: 0;
-    background-image: url("right.png");
+.right{
+    right:0;
+    transform-origin:right center;
+    border-left:none;
+    z-index:1;
 }
 
 /* ===== WAX SEAL ===== */
