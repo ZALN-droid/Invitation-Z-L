@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Flipbook</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #book {
+      width: 90vw;
+      height: 90vh;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="book"></div>
+
+<script src="https://unpkg.com/page-flip/dist/js/page-flip.browser.min.js"></script>
+
+<script>
+  const pageFlip = new St.PageFlip(document.getElementById("book"), {
+    width: 400,
+    height: 600,
+    size: "stretch",
+    showCover: true
+  });
+
+  pageFlip.loadFromImages([
+    "images/page-01.jpg",
+    "images/page-02.jpg",
+    "images/page-03.jpg",
+    "images/page-04.jpg",
+    "images/page-05.jpg"
+  ]);
+</script>
+
+</body>
+</html>
