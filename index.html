@@ -40,12 +40,32 @@ body{
     object-fit:contain;
     display:block;
 }
+.page{
+    position:relative;
+}
 
+.page-wrap{
+    position:relative;
+    width:100%;
+    height:100%;
+}
 /* Turn.js pages */
 .turn-page{
     background:#fff !important;
 }
-
+.link-text{
+    position:absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-family:"Garamond","Georgia","Times New Roman",serif;
+    font-size:16px;
+    color:#2b2b2b;
+    background:rgba(255,255,255,0.6);
+    padding:8px 12px;
+    border-radius:8px;
+}
 /* Tap zones (optional but useful) */
 .tap{
     position:absolute;
@@ -66,7 +86,20 @@ body{
 <div id="flipbook">
 
     <div class="page"><img src="image1.png"></div>
-    <div class="page"><img src="image2.png"></div>
+    <div class="page">
+    <div class="page-wrap">
+
+        <img src="image2.png" style="width:100%;height:100%;object-fit:contain;">
+
+        <a href="https://your-location-link.com"
+           target="_blank"
+           class="link-text"
+           style="top:62%;left:25%;width:50%;height:12%;">
+            Tap to view location
+        </a>
+
+    </div>
+</div>
     <div class="page"><img src="image3.png"></div>
     <div class="page"><img src="image4.png"></div>
     <div class="page"><img src="image5.png"></div>
