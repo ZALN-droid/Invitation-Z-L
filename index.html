@@ -86,26 +86,26 @@ body{
 <div id="flipbook">
 
     <div class="page"><img src="image1.png"></div>
-    <div class="page" style="position:relative;">
-    <img src="image2.png" style="width:100%;height:100%;object-fit:contain;">
+    <div class="page">
+    <img src="image2.png" style="width:100%;height:100%;object-fit:contain;display:block;">
 
-    <a href="https://your-link.com"
-       target="_blank"
-       style="
+    <div onclick="window.open('https://your-link.com','_blank')"
+         style="
             position:absolute;
             top:60%;
-            left:50%;
-            transform:translateX(-50%);
+            left:0;
+            width:100%;
+            height:15%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
             font-family:Garamond, serif;
             font-size:16px;
             color:#000;
             background:rgba(255,255,255,0.7);
-            padding:6px 10px;
-            border-radius:6px;
-            text-decoration:none;
-       ">
+         ">
         Tap to view location
-    </a>
+    </div>
 </div>
     <div class="page"><img src="image3.png"></div>
     <div class="page"><img src="image4.png"></div>
